@@ -60,4 +60,26 @@ if (!written.equals(dossier)) {
   throw new Error('dossier.json on disk does not match the dossier buildDossier wrote');
 }
 
+// Read every copied file back and confirm each copy is byte-for-byte
+// identical to its source: a truncated or corrupted copy must fail loudly
+// instead of handing in a game or screenshot that differs from the repo.
+function verifyCopies(sourceDir: string, destDir: string): void {
+  for (const name of readdirSync(sourceDir)) {
+    const src = join(sourceDir, name);
+    const dst = join(destDir, name);
+    if (statSync(src).isDirectory()) {
+      verifyCopies(src, dst);
+      continue;
+    }
+    if (!existsSync(dst)) throw new Error(`copied file missing from output: ${dst}`);
+    const sourceBytes = readFileSync(src);
+    const copiedBytes = readFileSync(dst);
+    if (!sourceBytes.equals(copiedBytes)) {
+      throw new Error(`copied file differs from its source: ${dst}`);
+    }
+  }
+}
+verifyCopies(gameDir, join(out, 'game'));
+verifyCopies(shotsDir, join(out, 'screenshots'));
+
 console.log(`Lantern Harbor handed in: ${shots.length} screenshots, dossier ${dossier.length} bytes`);
