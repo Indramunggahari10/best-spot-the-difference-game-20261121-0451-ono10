@@ -1,8 +1,8 @@
 # 🏮 Lantern Harbor — Spot the Difference
 
 [![bounty](https://make.fun/badge/best-spot-the-difference-game-20261121-0451.svg)](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
-[![rank](https://make.fun/badge/best-spot-the-difference-game-20261121-0451/Indramunggahari10/best-spot-the-difference-game-20261121-0451-ono10/rank.svg)](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
-[![reward](https://make.fun/badge/best-spot-the-difference-game-20261121-0451/Indramunggahari10/best-spot-the-difference-game-20261121-0451-ono10/reward.svg)](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
+[![rank](https://make.fun/badge/best-spot-the-difference-game-20261121-0451/vjmunggahari-ui/best-spot-the-difference-game-20261121-0451-ono10/rank.svg)](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
+[![reward](https://make.fun/badge/best-spot-the-difference-game-20261121-0451/vjmunggahari-ui/best-spot-the-difference-game-20261121-0451-ono10/reward.svg)](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
 
 A complete spot-the-difference game for the desktop browser, built for the
 [make.fun](https://make.fun/bounty/best-spot-the-difference-game-20261121-0451)
