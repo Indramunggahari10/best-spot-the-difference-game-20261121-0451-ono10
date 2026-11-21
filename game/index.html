@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Harbor — Spot the Difference</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-left">
+      <div id="game-title">🏮 Lantern Harbor</div>
+      <div id="level-name">Harbor Dawn</div>
+    </div>
+    <div class="hud-center">
+      <div id="counter" aria-live="polite">Found 0 of 7 — 7 to go</div>
+      <div id="streak">Streak 0</div>
+    </div>
+    <div class="hud-right">
+      <div id="timer">00:00</div>
+      <div id="score">Score 0</div>
+      <button id="hint-btn" type="button" title="Hint (H)">💡 Hint <span id="hints-left">3</span></button>
+      <button id="mute-btn" type="button" title="Mute (M)">🔊</button>
+    </div>
+  </header>
+
+  <main id="boards">
+    <figure class="panel">
+      <canvas id="panel-left" width="620" height="400"></canvas>
+      <figcaption>Left — the harbor as it was</figcaption>
+    </figure>
+    <div id="versus" aria-hidden="true">VS</div>
+    <figure class="panel">
+      <canvas id="panel-right" width="620" height="400"></canvas>
+      <figcaption>Right — spot what changed</figcaption>
+    </figure>
+    <canvas id="lens" width="160" height="160" aria-hidden="true"></canvas>
+  </main>
+
+  <footer id="controls">
+    <button id="restart-btn" type="button" title="Restart level (R)">↺ Restart</button>
+    <button id="levels-btn" type="button" title="Level select (Esc)">▦ Levels</button>
+    <span id="keys">Click a difference · H hint · Shift magnifier · M sound</span>
+    <span id="misses">Misses 0</span>
+  </footer>
+
+  <div id="overlay" class="overlay">
+    <div id="overlay-card"></div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
